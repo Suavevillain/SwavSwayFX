@@ -1,0 +1,50 @@
+* {
+  all: unset;
+}
+* {
+  all: unset;
+}
+
+@import url('/home/swav/.cache/wal/colors-waybar.css');
+
+window > box {
+  font-family: Grape Nuts, monospace; /* Font for window title */
+  margin: 0px 0px 0px -4px;
+  background-color: #2a292d; /* Background color for the window */
+}
+
+#workspaces button.active {
+  font-family: 'Bodoni 24 Medium', serif; /* Font for active workspace buttons */
+  font-size: 20px; /* Adjusted size for consistency */
+  color: @background;
+}
+
+#clock {
+  font-family: 'VCR OSD Mono', monospace; /* Font for the clock */
+  margin: 15px;
+  font-size: 18px;
+  color: @color9;
+  padding: 10; /* Set padding to 0 to control size */
+  margin: 0px;
+  background: rgba(0, 0, 0, 0);
+}
+
+#workspaces {
+  padding: 10px 5px; /* Adjust padding to control the bar size */
+  margin: 0px;
+  border-radius: 2px;
+  background-color: @color11;
+}
+
+#pulseaudio {
+  background: linear-gradient(to right, @color11, @color2); /* Gradient background */
+  color: #FFFFFF; /* Change text color for visibility */
+  /* Removed padding to keep size consistent */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+#pulseaudio.muted {
+  background-color: #90b1b1;
+  color: #2a5c45;
+}
+

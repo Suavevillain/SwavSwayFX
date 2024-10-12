@@ -1,0 +1,48 @@
+
+{
+  "name": "sidebar",
+  "layer": "top",
+  "output": "HDMI-A-1",
+  "position": "left",
+  "margin-right": 2,
+  "modules-left": ["clock"],
+  "modules-center": ["sway/workspaces"],  // Moved workspaces to the center
+  "modules-right": [
+    "custom/menu",
+    "pulseaudio",  // Volume control module
+    "tray",
+    "network"
+  ],
+  "spacing": 15,
+
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "format": "<span font_family='Fira Code'>{icon}</span>",
+    "format-icons": {
+      "active": "",
+      "default": "♥"
+    },
+    "sort-by-number": true 
+  },
+
+  "clock": {
+    "format": "{:%I\n%M}"
+  },
+
+  "custom/menu": {},
+
+  "network": {
+    "interface": "enp4s0",
+    "format": " {ipaddr}",
+    "tooltip-format": "{ifname}: {ipaddr}"
+  },
+
+  "pulseaudio": {
+    "format": "🎧 {volume}",  // Using a headphones icon for pulseaudio
+    "tooltip-format": "Volume: {volume}",
+    "on-click": "pavucontrol"
+  }
+}
+
