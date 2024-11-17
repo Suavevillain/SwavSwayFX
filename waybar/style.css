@@ -36,6 +36,17 @@ window > box {
   background-color: @color11;
 }
 
+
+#workspaces .focused {
+    color: #9D4DD5; /* Color for the active (focused) workspace icon */
+    font-weight: bold; /* Optional: make the active icon stand out */
+}
+
+#workspaces .default {
+    color: #cccccc; /* Color for inactive workspace icons */
+    opacity: 0.7; /* Optional: make inactive icons slightly faded */
+}
+
 #pulseaudio {
   background: linear-gradient(to right, @color11, @color2); /* Gradient background */
   color: #FFFFFF; /* Change text color for visibility */

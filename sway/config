@@ -20,6 +20,9 @@ blur_radius 5
 corner_radius 10
 
 
+#Window shadows
+shadows enable
+shadow_blur_radius 10
 
 ### Variables
 #
@@ -60,7 +63,7 @@ output DP-2 resolution 1920x1080 position 3840 0 transform 270
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
-output * bg /usr/share/backgrounds/default.png fill
+#output * bg /usr/share/backgrounds/default.png fill
 #
 # Example configuration:
 #
@@ -104,6 +107,18 @@ output * bg /usr/share/backgrounds/default.png fill
 
     # Kill focused window
     bindsym $mod+q kill
+
+    #Emoji  
+    bindsym Alt+e exec bemoji -c
+
+
+
+    #Web Browser
+    bindsym Alt+w exec flatpak run org.mozilla.firefox
+
+    #Discord
+    bindsym Alt+v exec flatpak run dev.vencord.Vesktop
+
 
     # Start your launcher
     bindsym $mod+d exec $menu
@@ -325,15 +340,21 @@ client.focused $color0 $background $foreground $color7 $background
 
 
 
-set $GTK_THEME YourTheme
-set $GTK_ICON_THEME YourIconTheme
 
+set $theme_name MyCustomTheme
+set $icon_theme MyCustomIcons
 exec_always {
-   export GTK_THEME=Squared
-   export GTK_ICON_THEME=WhiteSur-pink-dark
+    export GTK_THEME=$theme_name
+    export GTK_ICON_THEME=$icon_theme
 }
+
 
 
 # Disable title bars for all windows
 for_window [floating] title_bar disable
 for_window [title=".*"] title_bar disable
+
+#notfiy
+exec dunst
+
+exec syncthing

@@ -1,0 +1,12 @@
+[Default Applications]
+inode/directory=thunar.desktop
+application/octet-stream=nemo.desktop
+text/html=com.vivaldi.Vivaldi.desktop
+x-scheme-handler/http=com.vivaldi.Vivaldi.desktop
+x-scheme-handler/https=com.vivaldi.Vivaldi.desktop
+x-scheme-handler/about=com.vivaldi.Vivaldi.desktop
+x-scheme-handler/unknown=com.vivaldi.Vivaldi.desktop
+image/jpeg=org.gnome.Loupe.desktop
+
+[Added Associations]
+image/jpeg=org.gnome.Loupe.desktop;
