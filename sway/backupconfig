@@ -358,6 +358,3 @@ for_window [title=".*"] title_bar disable
 exec dunst
 
 exec syncthing
-
-#cursor
-seat * xcursor_theme catppuccin-macchiato-blue-cursors 24
