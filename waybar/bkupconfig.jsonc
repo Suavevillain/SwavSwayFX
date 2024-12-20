@@ -26,7 +26,6 @@
     "pulseaudio/slider",
     "pulseaudio#audio",
     "bluetooth",
-    "tray",
     "clock"
   ],
 

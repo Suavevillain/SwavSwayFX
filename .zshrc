@@ -70,15 +70,18 @@ ZSH_THEME="headline"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-plugins=(zsh-syntax-highlighting)
-plugins=(zsh-autosuggestions)
-plugins=(zsh-completions)
-autoload -U compinit && compinit
-plugins=(copydir)
-plugins=(sudo)
+plugins=(
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  zsh-history-substring-search
+  zsh-completions
+  sudo
+)
 
+autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
+
 
 # User configuration
 
@@ -157,3 +160,4 @@ set_pywal_colors
 
 
 eval "$(zoxide init zsh)"
+
